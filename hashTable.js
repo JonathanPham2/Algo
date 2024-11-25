@@ -2,7 +2,7 @@
 // the value returned by a hash function called hash value, hash codes, digest, or simply hash
 
 class HashTable {
-    constructor(size=53){
+    constructor(size=3){
         this.keyMap = new Array(size)
 
     }
@@ -49,3 +49,11 @@ class HashTable {
 }
 let ht = new HashTable()
 ht.set("hello", "good")
+ht.set("yellow", "1")
+ht.set("orange", "2")
+ht.set("nope", "3")
+ht.set("sasasa", "3")
+
+console.log(ht)
+console.log(ht.get("sasasa"))
+
