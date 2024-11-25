@@ -36,15 +36,16 @@ class HashTable {
 
     get(key){
         let hashedKey = this._hash(key)
-        let result = undefined
-        if(!this.keyMap[hashedKey]){
-            return undefined
-        }
-        for(let  array of this.keyMap){
-            if(array[0] === key){
-                result = array[1]
+        if(this.keyMap[hashedKey]){
+            for(let subArray of this.keyMap[hashedKey]){
+                if(subArray[0] === key){
+                    return subArray
+                }
             }
+           
         }
-        return result
+       return undefined
     }
 }
+let ht = new HashTable()
+ht.set("hello", "good")
