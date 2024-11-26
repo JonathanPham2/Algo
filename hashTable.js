@@ -39,12 +39,32 @@ class HashTable {
         if(this.keyMap[hashedKey]){
             for(let subArray of this.keyMap[hashedKey]){
                 if(subArray[0] === key){
-                    return subArray
+                    return subArray[1]
                 }
             }
            
         }
        return undefined
+    }
+    keys(){
+      let  keysArray = []
+      if(this.keyMap.length === 0){
+        return undefined
+      }
+      for(let i = 0; i < this.keyMap.length; i++){
+       
+            for(let subArray of this.keyMap[i]){
+                keysArray.push(subArray[0])
+            }
+        
+        
+        
+        
+
+
+      }
+      return keysArray
+
     }
 }
 let ht = new HashTable()
@@ -55,5 +75,7 @@ ht.set("nope", "3")
 ht.set("sasasa", "3")
 
 console.log(ht)
-console.log(ht.get("sasasa"))
+console.log(ht.get("hello"))
+console.log(ht.keys())
+
 
