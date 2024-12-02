@@ -1,8 +1,13 @@
 class Graphs {
     constructor(){
-        this.adjacencyList = {
-
+        this.adjacencyList = {}
+        
+    }
+    addVertex(vertex){
+        if(!this.adjacencyList[vertex]){
+            this.adjacencyList[vertex] = []
         }
     }
-
+    
+    
 }
