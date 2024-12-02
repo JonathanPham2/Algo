@@ -18,4 +18,13 @@ class Graphs {
         this.adjacencyList[vertex1].filter(v => v !== vertex2)
         this.adjacencyList[vertex2].filter(v => v !== vertex1)
     }
+
+    removeVertex(vertex){
+        while(this.adjacencyList[vertex].length){
+            adjacentVertex = this.adjacencyList[vertex].pop()
+            this.removeEdge(vertex, adjacentVertex)
+        }
+        delete this.adjacencyList[vertex]
+
+    }
 }
