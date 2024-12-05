@@ -26,5 +26,70 @@ class Graphs {
         }
         delete this.adjacencyList[vertex]
 
+
+    }
+    recursiveTraversal(vertex){
+        if(this.adjacencyList[vertex].length === 0){
+            return
+        }
+        let neighbor = this.adjacencyList[vertex].pop()
+        if(!visitedVertex.has){
+            visitedVertex.add(neighbor)
+            resultArray.push(neighbor)
+            recursiveTraversal(neighbor)
+        }
+
+    
+    }
+    DFS(node){
+        let resultArray = [node]
+        let visitedVertex = new Set(node)
+        let  recursiveTraversal = (vertex ) =>{
+           
+            if(this.adjacencyList[vertex].length === 0){
+                
+                return
+            }
+            
+           for(let neighbor of [...this.adjacencyList[vertex]]){
+            if(!visitedVertex.has(neighbor)){
+                visitedVertex.add(neighbor)
+                resultArray.push(neighbor)
+                recursiveTraversal(neighbor)
+            }
+        }
+
+        
+        }
+       
+        recursiveTraversal(node)
+        console.log(visitedVertex)
+
+        return resultArray
+
     }
 }
+let g = new Graphs()
+
+
+g.addVertex("A")
+g.addVertex("B")
+g.addVertex("C")
+g.addVertex("D")
+g.addVertex("E")
+g.addVertex("F")
+
+g.addEdge("A","B")
+g.addEdge("A","C")
+g.addEdge("B","D")
+g.addEdge("C","E")
+g.addEdge("D","E")
+g.addEdge("D","F")
+g.addEdge("E","F")
+
+
+console.log(g)
+let node =  "A"
+
+console.log(g.DFS(node))
+console.log(g)
