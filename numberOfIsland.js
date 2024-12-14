@@ -4,7 +4,7 @@ var numIslands = function(grid) {
     for(let r = 0; r < grid.length; r++){
         for(let c = 0; c < grid[r].length; c ++){
             let validIsland = grid[r][c];
-            if(visited.has([r,c]) || validIsland == "0" ) continue
+            if(visited.has(`${r, c}`) || validIsland == "0" ) continue
             dfs(r, c, grid, visited)
             islandCount++
         }
@@ -16,18 +16,17 @@ var numIslands = function(grid) {
 const dfs = (row, col, grid, visited) => {
     const stack = [[row, col]]
     while(stack.length){
-        let currentSquare = stack.pop()
-        console.log(currentSquare)
-        if(visited.has(currentSquare)) continue
-        visited.add(currentSquare)
-        let neighbors = getValidNeighbors(currentSquare, grid)
+        let [x, y] = stack.pop()
+        // console.log(currentSquare)
+        if(visited.has(`${x, y}`)) continue
+        visited.add(`${x, y}`)
+        let neighbors = getValidNeighbors(x, y, grid)
         stack.push(...neighbors)
         
     }
 
 }
-const getValidNeighbors = (currentSquare, grid) => {
-    let [row, col ] = currentSquare
+const getValidNeighbors = (row, col, grid) => {
     const validNeighbors = []
     const neighborCoords = [
         [row +1, col],
@@ -35,7 +34,13 @@ const getValidNeighbors = (currentSquare, grid) => {
         [row, col + 1],
         [row, col -1 ]
     ]
-    for(let )
+    for(let neighbor of neighborCoords){
+        let[row, col] = neighbor
+        if(row < 0 || row > grid.length || col < 0 || col > grid[row].length - 1 ) continue
+        if(grid[row][col] === "0") continue
+        validNeighbors.push([row, col])
+    }
+    return validNeighbors
 }
 
 
