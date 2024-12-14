@@ -36,7 +36,7 @@ const getValidNeighbors = (row, col, grid) => {
     ]
     for(let neighbor of neighborCoords){
         let[row, col] = neighbor
-        if(row < 0 || row > grid.length || col < 0 || col > grid[row].length - 1 ) continue
+        if(row < 0 || row > grid.length  -1 || col < 0 || col > grid[row].length -1 ) continue
         if(grid[row][col] === "0") continue
         validNeighbors.push([row, col])
     }
@@ -45,10 +45,5 @@ const getValidNeighbors = (row, col, grid) => {
 
 
 let grid = [["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]
-let grid2 = [
-    ["1","1","0","0","0"],
-    ["1","1","0","0","0"],
-    ["0","0","1","0","0"],
-    ["0","0","0","1","1"]
-  ]
+let grid2 = [["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]
 console.log(numIslands(grid2))
