@@ -68,6 +68,46 @@ class Graphs {
         return resultArray
 
     }
+    dfsIterative(start){
+        let stack = []
+        stack.push(start)
+        let visisted = new Set()
+        let result = []
+        while (stack.length !== 0){
+           let vertex = stack.pop()
+            if(!visisted.has(vertex)){
+                result.push(vertex)
+                visisted.add(vertex)
+                for(let neighbor of this.adjacencyList[vertex]){
+                    stack.push(neighbor)
+                }
+                
+            }
+        
+        }
+        return result 
+    }
+    bfs(start){
+        let result = []
+        let visited = new Set()
+        let queue = [start]
+
+        while(queue.length){
+            let vertex = queue.shift()
+            visited.add(vertex)
+            result.push(vertex)
+            for(let neighbor of this.adjacencyList[vertex]){
+                if(!visited.has(neighbor)){
+                    visited.add(neighbor)
+                    queue.push(neighbor)
+                }
+            }
+            
+            
+
+        }
+        return result 
+    }
 }
 let g = new Graphs()
 
@@ -91,5 +131,4 @@ g.addEdge("E","F")
 console.log(g)
 let node =  "A"
 
-console.log(g.DFS(node))
-console.log(g)
+console.log(g.bfs(node))
