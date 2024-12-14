@@ -94,7 +94,7 @@ class Graphs {
 
         while(queue.length){
             let vertex = queue.shift()
-            visited.add(vertex)
+            visited.add(vertex) 
             result.push(vertex)
             for(let neighbor of this.adjacencyList[vertex]){
                 if(!visited.has(neighbor)){
