@@ -75,7 +75,7 @@ class MaxBinaryHeap {
 
 let heap = new MaxBinaryHeap()
 // console.log("before",heap)
-// heap.insert(100)
+heap.insert(100)
 // console.log("after",heap)
 // heap.insert(1)
 // console.log("after insert small value", heap)
