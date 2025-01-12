@@ -1,0 +1,2 @@
+def wallAndGate(grid):
+    pass
