@@ -53,4 +53,4 @@ test_grid3 = [
 # test_grid6 = [
 #     [0]
 # ]
-print(wallAndGate(test_grid6))  
+# print(wallAndGate(test_grid6))  
