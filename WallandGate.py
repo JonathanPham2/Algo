@@ -33,10 +33,10 @@ test_grid2 = [
     [-1, -1],
     [-1, -1]
 ]
-test_grid3 = [
-    [float('inf'), float('inf')],
-    [float('inf'), float('inf')]
-]
+# test_grid3 = [
+#     [float('inf'), float('inf')],
+#     [float('inf'), float('inf')]
+# ]
 
 # test_grid4 = [
 #     [float('inf'), float('inf'), 0],
