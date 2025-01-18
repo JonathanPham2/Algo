@@ -44,13 +44,13 @@ test_grid4 = [
     [float('inf'), float('inf'), float('inf')]
 ]
 
-test_grid5 = [
-    [0, -1, float('inf')],
-    [-1, float('inf'), 0],
-    [float('inf'), float('inf'), float('inf')]
-]
+# test_grid5 = [
+#     [0, -1, float('inf')],
+#     [-1, float('inf'), 0],
+#     [float('inf'), float('inf'), float('inf')]
+# ]
 
-test_grid6 = [
-    [0]
-]
-# print(wallAndGate(test_grid6))
+# test_grid6 = [
+#     [0]
+# ]
+print(wallAndGate(test_grid6))  
