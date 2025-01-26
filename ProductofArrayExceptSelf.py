@@ -39,5 +39,6 @@ def productOfArrayExceptSelf(nums):
     return result
 
 test = [1,2,3,4]
+print(productOfArrayExceptSelf(test))
 
 
