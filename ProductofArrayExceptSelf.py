@@ -24,3 +24,19 @@
  
 
 # Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
+
+def productOfArrayExceptSelf(nums):
+    n = len(nums)
+    result = [1] * n
+    # prefix product
+    for i in range(1, n):
+        result[i] *= nums[i-1]
+    suffix = 1
+    # suffix product and multiply by prefix 
+    for i in range(n - 2, -1, -1):
+        suffix *= nums[i+1]
+        result[i] = result[i] * suffix
+    return result
+
+
+
