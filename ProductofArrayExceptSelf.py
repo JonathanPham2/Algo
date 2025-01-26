@@ -30,7 +30,8 @@ def productOfArrayExceptSelf(nums):
     result = [1] * n
     # prefix product
     for i in range(1, n):
-        result[i] *= nums[i-1]
+       result[i] =  result[i-1] * nums[i-1]
+    #  result[1] = result[1-1 = 0] * nums[1-1 = 0]
     suffix = 1
     # suffix product and multiply by prefix 
     for i in range(n - 2, -1, -1):
