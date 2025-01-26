@@ -38,5 +38,6 @@ def productOfArrayExceptSelf(nums):
         result[i] = result[i] * suffix
     return result
 
+test = [1,2,3,4]
 
 
