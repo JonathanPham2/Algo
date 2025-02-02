@@ -1,2 +1,2 @@
 def MinimumKnightMoves(x,y):
-    pass
+    pas
