@@ -38,5 +38,33 @@
     # loop through the string
     # Whenever we encounter a open  parentheses push it into the stack
     # when we encounter a closing parenthese. We pop the parenthese at the top of out stack
+    # Compare it with using a hash map with the closing parenthese as a key if the value match we continue else return false
+class Solution:
+    def isValid(self, s: str) -> bool:
+        if len(s) < 2:
+            return False
+        m = {
+            ")":"(",
+            "}":"{",
+            "]":"["
+        }
+        stack = []
+        for b in s:
+            if b in m.values():
+                stack.append(b)
+            else:
+                if len(stack) == 0:
+                    return False
+                elif stack.pop() != m[b]:
+                    return False
+
+           
+                
+        if stack:
+            return False
+        return True
+        
+
+
 
     
