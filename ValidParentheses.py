@@ -53,19 +53,23 @@ class Solution:
 
         stack = [] #? initalize a stack 
         for b in s: #? loop throuhg the
-            if b in m.values(): #? Now we check if this string is an open bracket or not if yes push it into the stack
-                stack.append(b)
+            if b in m.values(): #? Now we check if this string is an open bracket or not if yes 
+                stack.append(b) #? We push it into the stack if yes
             else:
-                if len(stack) == 0:
-                    return False
-                elif stack.pop() != m[b]:
+                if len(stack) == 0: #? Otherwise we check if the length of our stack is empty if IT IS EMPTY
+                    #? MEANING that we encounter a closing bracket before opening bracket RETURN FALSE STRING IS INVALID!!!
+                    return False 
+                elif stack.pop() != m[b]: #? Last step is to compare if the open bracket from the top of stack match the current closing bracket
+                    #? If not we return False immediately becuase this whole string is Invalid!!!!
                     return False
 
            
                 
-        if stack:
+        if stack: #? Final  check for our stack here if there are still something in our stack at this point
+            #? meaning that WE HAVE NOT FOUND A CLOSING BRACKET AFTER LOOPING ENTIRE STRING RETURN FALSE
             return False
-        return True
+        # ? alternate we could do  return len(stack) == 0: if our stack empty it would return True else it would return False
+        return True #? otherwise this string is Valid we return True
         
 
 
