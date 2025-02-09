@@ -41,8 +41,8 @@
     # ?Compare it with using a hash map with the closing parenthese as a key if the value match we continue else return false
 class Solution:
     def isValid(self, s: str) -> bool:
-        if len(s) < 2:
-            return False  #?First we check if the lenght of the string input is less than 2 
+        # if len(s) < 2:
+        #     return False  #?First we check if the lenght of the string input is less than 2 
             # ?meaning that this string is invalid in first place !!!
         m = {
             ")":"(",
