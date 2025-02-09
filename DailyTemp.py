@@ -13,5 +13,18 @@
 # Input: temperatures = [30,60,90]
 # Output: [1,1,0]
 
+# initial approach was to using monotonic dereasing stack to keep track
+# of indices where we have not found a warmer day yet
+# loop through the temps array
+# at each index we check :
+    # if the temperature at current index is greater than 
+    # temperature of the index at the top of the stack if yes:
+    # we go in to our while loop and pop that index out and calculate the day
+    # then we push the day differences to our answer array at the popped index
+    # if not we append the index to our stack 
+    # return answer after for loop is done this is o(n) time complexity because we loop through temp array
+
+
+
 def dailyTemperatures(temps):
     pass
