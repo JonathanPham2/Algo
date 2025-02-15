@@ -27,4 +27,6 @@
 
 
 def dailyTemperatures(temps):
-    pass
+    #* first we initialize a stack
+    stack = []
+    
