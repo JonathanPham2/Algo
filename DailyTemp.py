@@ -29,4 +29,17 @@
 def dailyTemperatures(temps):
     #* first we initialize a stack
     stack = []
-    
+    answer  = [0] * len(temps)
+    for i in range(len(temps)):
+        while stack and temps[stack[-1]]  < temps[i]: #!Always remember to compare top of the stack temperature(not the index) to the temp at current index
+            print(stack)
+            pop_index  = stack.pop()
+            answer[pop_index] = i - pop_index
+        stack.append(i)
+
+    return answer       
+        
+        
+test = [73,74,75,71,69,72,76,73]# Output: [1,1,4,2,1,1,0,0]
+print(dailyTemperatures(test))
+
