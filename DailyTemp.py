@@ -36,10 +36,10 @@ def dailyTemperatures(temps):
             pop_index  = stack.pop()
             answer[pop_index] = i - pop_index
         stack.append(i)
-
+        #* append the current index to the stack
     return answer       
         
         
 test = [73,74,75,71,69,72,76,73]# Output: [1,1,4,2,1,1,0,0]
-# print(dailyTemperatures(test))
+print(dailyTemperatures(test))
 
