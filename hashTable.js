@@ -70,7 +70,7 @@ class HashTable {
                 }
             }
         }
-        // return valuesArray
+        return valuesArray
     
     }
 }

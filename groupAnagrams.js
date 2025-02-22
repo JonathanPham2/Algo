@@ -16,4 +16,4 @@ const groupAnagrams = (strs) => {
 let example = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
 result = groupAnagrams(example)
-console.log(result)
+// console.log(result)
