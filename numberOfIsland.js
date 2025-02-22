@@ -21,7 +21,7 @@ const dfs = (row, col, grid, visited) => {
         if(visited.has(`${x, y}`)) continue
         visited.add(`${x, y}`)
         let neighbors = getValidNeighbors(x, y, grid)
-        stack.push(...neighbors)
+        // stack.push(...neighbors)
         
     }
 
