@@ -21,18 +21,18 @@ class PriorityQueue{
         }
     }
 
-    // dequeue(){
-    //     if(this.value.length === 0 ){
-    //         return null
-    //     }
-    //    let  highestPriority = this.value[0]
-    //    let lowest = this.value.pop()
-    //    if(this.value.length > 0){
-    //     this.value[0] = lowest
-    //     this.sinkDown()
-    //    }
-    //    return highestPriority
-    // }
+    dequeue(){
+        if(this.value.length === 0 ){
+            return null
+        }
+       let  highestPriority = this.value[0]
+       let lowest = this.value.pop()
+       if(this.value.length > 0){
+        this.value[0] = lowest
+        this.sinkDown()
+       }
+       return highestPriority
+    }
     sinkDown(){
        let idx = 0 
        let element = this.value[idx]
