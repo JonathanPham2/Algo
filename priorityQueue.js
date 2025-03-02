@@ -7,7 +7,7 @@ class PriorityQueue{
         this.value.push(newNode)
         this.bubbleDown()
     }
-    // bubbleDown(){
+    bubbleDown(){
         let idx = this.value.length - 1
         let element = this.value[idx]
         while(idx > 0 ){
