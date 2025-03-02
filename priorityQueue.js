@@ -33,27 +33,27 @@ class PriorityQueue{
        }
        return highestPriority
     }
-    sinkDown(){
-       let idx = 0 
-       let element = this.value[idx]
-       let length = this.value.length
-       while(true){
-        let leftChildIndex = 2 * idx +1
-        let rightChildIndex = 2 * idx + 2
-        let swap = null
-        let leftChild, rightChild
-        if(leftChildIndex < length){
-            leftChild = this.value[leftChildIndex]
-            if(leftChild.priority <  element.priority){
-                swap = leftChildIndex
-            }
-        }
-        if(rightChildIndex < length){
-            rightChild = this.value[rightChildIndex];
-            if((swap === null && rightChild.priority < element.priority) || (swap !== null && leftChild.priority > rightChild.priority)){
-                swap = rightChildIndex
-            }
-        }
+    // sinkDown(){
+    //    let idx = 0 
+    //    let element = this.value[idx]
+    //    let length = this.value.length
+    //    while(true){
+    //     let leftChildIndex = 2 * idx +1
+    //     let rightChildIndex = 2 * idx + 2
+    //     let swap = null
+    //     let leftChild, rightChild
+    //     if(leftChildIndex < length){
+    //         leftChild = this.value[leftChildIndex]
+    //         if(leftChild.priority <  element.priority){
+    //             swap = leftChildIndex
+    //         }
+    //     }
+    //     if(rightChildIndex < length){
+    //         rightChild = this.value[rightChildIndex];
+    //         if((swap === null && rightChild.priority < element.priority) || (swap !== null && leftChild.priority > rightChild.priority)){
+    //             swap = rightChildIndex
+    //         }
+    //     }
         if(swap === null) break
         this.value[idx] = this.value[swap]
         this.value[swap] = element
