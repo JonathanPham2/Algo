@@ -114,7 +114,7 @@ let g = new Graphs()
 
 g.addVertex("A")
 g.addVertex("B")
-g.addVertex("C")
+// g.addVertex("C")
 // g.addVertex("D")
 // g.addVertex("E")
 // g.addVertex("F")
