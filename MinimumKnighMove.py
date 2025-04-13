@@ -1,4 +1,4 @@
 from collections import deque
 def MinimumKnightMoves(x,y):
-    queue = deque()
+    # queue = deque()
     visited = set()
