@@ -116,5 +116,5 @@ g.addVertex("A")
 g.addVertex("B")
 g.addVertex("C")
 g.addVertex("D")
-// g.addVertex("E")git a
+g.addVertex("E")
 g.addVertex("F")
