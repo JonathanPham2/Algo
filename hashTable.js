@@ -78,7 +78,7 @@ let ht = new HashTable()
 ht.set("hello", "good")
 ht.set("yellow", "1")
 // ht.set("orange", "2")
-ht.set("nope", "3")
+// ht.set("nope", "3")
 ht.set("sasasa", "3")
 
 console.log(ht)
