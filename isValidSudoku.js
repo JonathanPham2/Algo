@@ -16,7 +16,7 @@ const isValidSudoku = (board) => {
                 }
                 row[r].add(current_value)
                 col[c].add(current_value)
-                box[box_coordinate].add(current_value)
+                // box[box_coordinate].add(current_value)
             }
         }
     }
