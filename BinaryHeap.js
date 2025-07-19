@@ -73,7 +73,7 @@ class MaxBinaryHeap {
     }
 }
 
-let heap = new MaxBinaryHeap()
+// let heap = new MaxBinaryHeap()
 // console.log("before",heap)
 heap.insert(100)
 // console.log("after",heap)
