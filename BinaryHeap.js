@@ -62,7 +62,7 @@ class MaxBinaryHeap {
                 }
             }
             if(swap === null) break
-            this.values[idx] = this.values[swap]
+            // this.values[idx] = this.values[swap]
             // this.values[swap] = element 
             // idx = swap
             
